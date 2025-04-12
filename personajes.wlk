@@ -16,20 +16,33 @@ object luisa {
 object guerrero {
   const guerrero = "guerrero"
   method guerrero() = guerrero
+  method arma() = arma
+  method cargarArma(unaCarga){
+       self.arma().potencia(unaCarga)
   }
+ var armaQueTiene = arma
+  method armaQueTiene() = armaQueTiene
+ method encuentraUnArma(unArma){
+    armaQueTiene = unArma
+  }
+
+  }
+
+
 
  object floki {
   const tipo = guerrero
   method tipo() = tipo
   var defensa = 150
   method defensa() = defensa
-  var armaQueTiene = ballesta
-  method armaQueTiene() = armaQueTiene
-  
-  method flokiEncuentraUnArma(unArma){
-    armaQueTiene = unArma
+  var tipoDeArma = ballesta
+  method tipoDeArma()= tipoDeArma
+  method cargaElArma(unaCarga){
+       guerrero.cargarArma(unaCarga)
   }
-
+ method cambiaDeArma(unArma){
+      tipoDeArma = unArma
+  }
   } 
 
 object trabajador {
@@ -48,6 +61,10 @@ object trabajador {
   object arma {
   const arma = "arma"
   method arma() = arma
+  var potencia = 0
+  method potencia(unaCarga){
+    potencia = unaCarga
+  }
   var usada = false
   method usada() = usada
   method cambiarEstadoUso(){
@@ -58,10 +75,15 @@ object trabajador {
   object jabalina {
     const tipo = arma
     method tipo() = tipo
+var potencia = tipo.potencia()
+    method potencia() = potencia
+    
   }
 
   object ballesta {
     const tipo = arma
     method tipo() = tipo
+     var potencia = tipo.potencia()
+  method potencia() = potencia
   }
 
