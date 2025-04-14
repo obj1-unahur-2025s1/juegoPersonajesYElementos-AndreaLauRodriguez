@@ -12,7 +12,6 @@ object luisa {
   method defensa() = defensa
 
   }
-
 object guerrero {
   const guerrero = "guerrero"
   method guerrero() = guerrero
@@ -27,9 +26,6 @@ object guerrero {
   }
 
   }
-
-
-
  object floki {
   const tipo = guerrero
   method tipo() = tipo

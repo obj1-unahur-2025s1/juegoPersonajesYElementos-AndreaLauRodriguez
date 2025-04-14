@@ -4,9 +4,7 @@ object castillo {
   method altura() = altura
   var defensa = 150
   method defensa() = defensa
-
   }
-
 object tipa {
   var altura = 8
   method altura() = altura
@@ -14,7 +12,6 @@ object tipa {
     altura = unaAltura
   }
 }
-
 object aurora {
    var altura = 1
   method altura() = altura
@@ -22,6 +19,5 @@ object aurora {
   method estaViva() = estaViva
    method yaNoEstaViva(){
     estaViva = false
-   } 
-  
+   }  
 }
